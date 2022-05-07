@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { takeLast } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,10 +12,23 @@ export class AppComponent {
   //   val === "add" ? this.count++ : this.count--;
 
   // }
-  UserData = '';
+  //   UserData = '';
 
-  getData(data: any) {
-    console.log(data.value);
-    this
+  //   getData(data: any) {
+  //     console.log(data.value);
+  //     this
+  //   }
+  list: any[] = [];
+
+  Onclick(item: string) {
+    this.list.push({ id: this.list.length, name: item })
+    console.log(this.list);
+    item = '';
+
+
+  }
+
+  removeItem(id: number) {
+    this.list = this.list.filter(item => item.id !== id)
   }
 }

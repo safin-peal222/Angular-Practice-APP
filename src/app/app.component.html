@@ -47,10 +47,18 @@
     matBadge="8" matBadgePosition="before" matBadgeColor="accent">
   Action
 </button> -->
-<p>
+<!-- <p>
     Button with a badge on the left
     <button mat-raised-button color="primary"
         matBadge="8" matBadgePosition="before" matBadgeColor="accent">
       Action
     </button>
-  </p>
+  </p> -->
+<input type="text" #task placeholder="Input Your Task" ngModel="">
+<button type="submit" (click)="Onclick(task.value)">Add TasK</button>
+
+<ul *ngFor="let item of list">
+    <li>{{item.name}}
+        <button (click)="removeItem(item.id)">Remove</button>
+    </li>
+</ul>
