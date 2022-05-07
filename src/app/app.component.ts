@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  // count = 0;
+  // getData(val: string) {
+  //   val === "add" ? this.count++ : this.count--;
+
+  // }
+  UserData = '';
+
+  getData(data: any) {
+    console.log(data.value);
+    this
+  }
 }
