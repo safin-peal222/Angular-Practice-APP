@@ -18,6 +18,9 @@ import { HeaderComponent } from './header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatBadgeModule } from '@angular/material/badge';
+import { ChildComponent } from './child/child.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { MatBadgeModule } from '@angular/material/badge';
     EmployeeListComponent,
     DepartmentListComponent,
     UserListComponent,
-    HeaderComponent
+    HeaderComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,8 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatSliderModule,
     BrowserAnimationsModule,
     MatBadgeModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

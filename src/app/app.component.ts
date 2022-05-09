@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { takeLast } from 'rxjs';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -18,17 +19,29 @@ export class AppComponent {
   //     console.log(data.value);
   //     this
   //   }
-  list: any[] = [];
+  //   list: any[] = [];
 
-  Onclick(item: string) {
-    this.list.push({ id: this.list.length, name: item })
-    console.log(this.list);
-    item = '';
+  //   Onclick(item: string) {
+  //     this.list.push({ id: this.list.length, name: item })
+  //     console.log(this.list);
+  //     item = '';
 
 
-  }
+  //   }
 
-  removeItem(id: number) {
-    this.list = this.list.filter(item => item.id !== id)
+  //   removeItem(id: number) {
+  //     this.list = this.list.filter(item => item.id !== id)
+  //   }
+
+  // data = 10;
+  // name = new FormControl('');
+
+  profileForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl('')
+  });
+
+  onSubmit() {
+    console.log(this.profileForm.value)
   }
 }

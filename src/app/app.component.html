@@ -54,11 +54,27 @@
       Action
     </button>
   </p> -->
-<input type="text" #task placeholder="Input Your Task" ngModel="">
+<!-- <input type="text" #task placeholder="Input Your Task" ngModel="">
 <button type="submit" (click)="Onclick(task.value)">Add TasK</button>
 
 <ul *ngFor="let item of list">
     <li>{{item.name}}
         <button (click)="removeItem(item.id)">Remove</button>
     </li>
-</ul>
+</ul> -->
+<!-- 
+<app-child [item]= "data"></app-child> -->
+
+
+<!-- <app-hero></app-hero> -->
+
+
+
+<form [formGroup]="profileForm"(ngSubmit)="onSubmit()">
+  <label for="first-name">Name: </label>
+<input id="first-name" type="text" formControlName="firstName">
+  <label for="last-name">Name: </label>
+<input id="last-name" type="text" formControlName="lastName">
+
+<button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
